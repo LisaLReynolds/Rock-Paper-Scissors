@@ -1,8 +1,8 @@
 
-let choice = ["rock", "paper", "scissors"];
+
 
 //Write a function that randomly selects rock, paper, or scissors for the computer and a function that gets the user's choice. then compare the two choices and determine the winner.
-
+const playGame = function() {
 //Create an object to track our statistics
 const stats = {
     wins: 0,
@@ -77,3 +77,18 @@ while (keepPlaying) {
         keepPlaying = window.confirm("Play again?")
     }
 }
+
+// Print stats with line breaks
+window.alert(`Stats:
+    Wins: ${stats.wins}
+    Losses: ${stats.losses}
+    Ties: ${stats.ties}
+    
+    Your Choices:
+    Rock: ${stats.count.rock}
+    Paper: ${stats.count.paper}
+    Scissors: ${stats.count.scissors}`);
+}
+
+// Run the game 
+playGame();
