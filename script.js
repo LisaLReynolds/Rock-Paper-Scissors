@@ -68,6 +68,12 @@ while (keepPlaying) {
             stats.wins++;
             window.alert("You win!")
          // If above conditions failed, assume player lost   
+        } else {
+            stats.losses++;
+            window.alert("You lost!")
         }
+
+        // Ask user to play again
+        keepPlaying = window.confirm("Play again?")
     }
 }
